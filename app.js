@@ -2,21 +2,6 @@ const notes = require('./notes');
 const yargs = require('yargs');
 
 
-
-
-
-// const command = process.argv[2];
-// if(command === 'add'){
-//     console.log(chalk.green('Adding note!'));
-// } else if(command === 'remove'){
-//     console.log(chalk.red('Removing notes!'));
-// }
-// console.log(process.argv);//prints the parsed data provided  from input  user
-
-
-//customize yargs version
-// yargs.version('1.1.0');
-
 //create command of add
 yargs.command({
     command: 'add',
@@ -34,8 +19,6 @@ yargs.command({
         }
     },
     handler(argv) {// shorthand function
-        // console.log("Title: "+ chalk.green(argv.title));// in argv our title is stored
-        // console.log("Body: "+ chalk.green(argv.body));// in argv our body is stored
         notes.addNote(argv.title , argv.body);
     }
     
@@ -73,7 +56,7 @@ yargs.command({
 
 yargs.command({
     command: 'list',
-    describe: 'list your note',
+    describe: 'lists of all note',
     handler(argv) {
         notes.listNotes();
     }

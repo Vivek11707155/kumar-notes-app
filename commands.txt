@@ -1,0 +1,11 @@
+Command To Add a note 
+node app.js add --title="Title_name" --body="Note_you_want_to_add"
+
+Command To Add a note 
+node app.js remove --title="Existing_Title_name"
+
+Command To Read a note
+node app.js read --title="Existing_Title_name"
+
+Command To see List a note
+node app.js list

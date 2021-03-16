@@ -1,7 +1,5 @@
 const fs = require('fs');
 const chalk = require('chalk'); 
-const { Console } = require('console');
-
 
 // add note funvtion
 const addNote = (title,body) => {
@@ -57,8 +55,8 @@ const readNotes = (title) =>{
     const notes = loadNotes();
     const noteReaded = notes.find((note)=> note.title === title);
     if(noteReaded){// if found 
-        console.log(chalk.green.inverse(noteReaded.title));
-        console.log(chalk.inverse(noteReaded.body));
+        console.log(chalk.green.inverse("Title: "+noteReaded.title));
+        console.log(chalk.inverse("Body: "+noteReaded.body));
     } else {// else not
         console.log(chalk.red.inverse("Note Not Found"));
     }
